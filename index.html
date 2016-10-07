@@ -1,0 +1,233 @@
+<!DOCTYPE HTML>
+<!--
+	Aerial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Welcome to my Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	<style>
+	a{
+		text-decoration:none;
+		color:white;
+	}
+	a:link{
+		text-decoration:none;
+		color:white;
+	}
+	a:hover{
+		text-decoration:none;
+		color:white;
+	}
+	
+	.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+	}
+
+	/* The navigation menu links */
+	.sidenav a {
+		padding: 8px 8px 8px 32px;
+		text-decoration: none;
+		font-size: 25px;
+		color: #111;
+		display: block;
+		transition: 0.3s
+	
+	}
+	/* Position and style the close button (top right corner) */
+	.sidenav .closebtn {
+		position: absolute;
+		top: 0;
+		right: 25px;
+		font-size: 36px;
+		margin-left: 50px;
+	}
+
+	/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+	#main {
+		transition: margin-left .5s;
+		padding: 20px;
+	}
+
+	/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+	@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+	}
+	.more:hover{
+		
+		font-size:105%;
+
+	}
+	nav{
+		display:none;
+	}
+	h1{
+		font-family:algerian;
+	}
+	</style>
+
+	</head>
+	
+	<body class="loading">
+		<div id="wrapper">
+			<div id="bg"></div>
+			<div id="overlay"></div>		
+			<div id="mySidenav" class="sidenav">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><strong style="color:#818181" onMouseOver="this.style.color='white'"   onMouseOut="this.style.color='#818181'">&times;</strong></a>
+				<a href="#" id="home">    <strong style="color:#818181" onMouseOver="this.style.color='white'"   onMouseOut="this.style.color='#818181'">Home     </strong></a>
+				<a href="#" id="intro">   <strong style="color:#818181" onMouseOver="this.style.color='white'"   onMouseOut="this.style.color='#818181'">Introduction    </strong></a>
+				<a href="#" id="me">  <strong style="color:#818181" onMouseOver="this.style.color='white'"   onMouseOut="this.style.color='#818181'">About me</strong></a>
+				<a href="#" id="works">   <strong style="color:#818181" onMouseOver="this.style.color='white'"   onMouseOut="this.style.color='#818181'">My Works </strong></a>
+				<a href="#" id="connect"><strong style="color:#818181" onMouseOver="this.style.color='white'"   onMouseOut="this.style.color='#818181'">Contact  </strong></a>
+			</div>
+			<div>
+			<div id="main">
+				
+				<header id="header">
+				<div style="background: rgba(0, 0, 0, 0.00);padding:20px 0px; border-radius:20px">
+					<h1 id="head">Sourav Mondal</h1>
+					<strong id="tag" style="font-size:35px;font-family:algerian"></strong>
+					<p id="info">&bull;&nbsp;Web Developer &nbsp;&bull;&nbsp; Coder </p>
+					<nav id="navigate">
+						<ul>
+							<li><a href="#" class="icon fa-linkedin"><span class="label">Linked-in</span></a></li>
+							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon fa-google-plus"><span class="label">Google-plus</span></a></li>
+							<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
+							<!--<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>-->
+						</ul>
+					</nav><br>
+					<span onclick="openNav()" style="border:2px solid white;padding:3px 8px;font-family:algerian;margin-top:40px" class="more">Menu</span>
+					
+				
+					
+				</div></header>
+				<footer id="footer">
+				<span class="fa fa-angle-double-up" style="font-size:30px;border:2px solid white;height:40px;width:40px;border-radius:50%;padding-top:1px" onclick="navup()"></span>
+				<span class="fa fa-angle-double-down" style="font-size:30px;margin-left:10%;border:2px solid white;height:40px;width:40px;border-radius:50%;padding-top:3px" onclick="navdown()"></span>
+						
+					</footer>
+				</div>
+			</div>
+			
+		</div>
+		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+		<script>
+			var x=1;
+			window.onload = function() { document.body.className = ''; }
+			window.ontouchmove = function() { return false; }
+			window.onorientationchange = function() { document.body.scrollTop = 0; }
+			function openNav() {
+				document.getElementById("mySidenav").style.width = "250px";
+				document.getElementById("main").style.marginLeft = "250px";
+				document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+			}
+			function closeNav() {
+				document.getElementById("mySidenav").style.width = "0";
+				document.getElementById("main").style.marginLeft = "0";
+				document.body.style.backgroundColor = "white";
+			}
+			document.getElementById("home").onclick = Home;
+			document.getElementById("intro").onclick = introduction;
+			document.getElementById("me").onclick = About;
+			document.getElementById("connect").onclick = Contact_info;
+			document.getElementById("works").onclick = Works;
+			function  Home() {
+				x=1
+				document.getElementById("navigate").style.display = "none";			
+				document.getElementById("head").style.display = "block";
+				document.getElementById("tag").innerHTML = "";
+				document.getElementById("info").innerHTML = "&bull;&nbsp;Web Developer &nbsp;&bull;&nbsp; Coder ";
+				closeNav();
+			}
+			function  introduction() {
+				x=2;
+				document.getElementById("head").style.display = "none";
+				document.getElementById("navigate").style.display = "none";
+				document.getElementById("tag").innerHTML = "Introduction";
+				document.getElementById("info").innerHTML = "<p>Welcome to my online portfolio!  I personally put together this website to showcase some of my previous work and accomplishments. Within this portfolio you will find my biography, my works, and contact information.<br>I made this portfolio by modifying html5 template. The link of html5 template that I used is &nbsp;<a href='https://html5up.net/aerial' target='_blank'>HTML5 template</a></p>";
+				closeNav();
+			}
+			function  About() {
+				x=3;
+				document.getElementById("navigate").style.display = "none";			
+				document.getElementById("head").style.display = "none";
+				document.getElementById("tag").innerHTML = "About me";
+				document.getElementById("info").innerHTML = "";
+				closeNav();
+			}
+			function  Works() {
+				x=4;
+				document.getElementById("head").style.display = "none";
+				document.getElementById("navigate").style.display = "none";
+				document.getElementById("tag").innerHTML = "My Works";
+				document.getElementById("info").innerHTML = "<p>I am currently working in my first project. Once I have completed my project, I will display it in my portfolio....</p>";
+				closeNav();
+			}
+			function  Contact_info() {
+				x=5;			
+				document.getElementById("navigate").style.display = "block";			
+				document.getElementById("head").style.display = "none";
+				document.getElementById("tag").innerHTML = "Contact Me";
+				document.getElementById("info").innerHTML = "Phone No.&nbsp;: &nbsp;9933965393 <br>Email &nbsp;:&nbsp;<a href='mailto:msourav2795@gmail.com'>msourav2795@gmail.com</a> <br> <strong style='font-size:110%;font-family:georgia'>Or, Connect via</strong>";
+				closeNav();
+			}
+			
+			function navup(){
+				if(x==1){
+					Contact_info();
+				}				
+				else if(x==2){
+					Home();
+				}				
+				else if(x==3){
+					introduction();
+				}				
+				else if(x==4){
+					About();
+				}				
+				else if(x==5){
+					Works();
+				}
+			}
+			function navdown(){
+				if(x==4){
+					Contact_info();
+				}				
+				else if(x==5){
+					Home();
+				}				
+				else if(x==1){
+					introduction();
+				}				
+				else if(x==2){
+					About();
+				}				
+				else if(x==3){
+					Works();
+				}
+			}
+			
+</script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="assets/js/bootstrap.min.js"></script>
+	</body>
+</html>
